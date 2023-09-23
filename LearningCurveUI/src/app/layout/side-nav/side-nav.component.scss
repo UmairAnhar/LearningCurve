@@ -1,0 +1,508 @@
+@import "../../../assets/styles/colors";
+
+.sidenav {
+  width: 240px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: $surface-color;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  transition: width .1s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(82, 82, 82, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+  z-index: 999;
+  transition: width .1s ease-in-out;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+
+  .head {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 0px 20px;
+
+    .logo {
+      height: 35px;
+      width: 175px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: left;
+      }
+    }
+
+    .btn{
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .body {
+    padding: 10px;
+    flex: 1;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+
+      li {
+        cursor: pointer;
+        a {
+          padding: 0 13px;
+          min-height: 45px;
+          display: flex;
+          align-items: center;
+          border-radius: 8px;
+          text-decoration: none;
+          position: relative;
+
+          .icon {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-right: 5px;
+            
+            i {
+              font-size: 24px;
+            }
+          }
+
+          .name {
+            font-size: 14px;
+            color: $dark-color;
+            flex: 1;
+            white-space: nowrap;
+            width: 110px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: absolute;
+            left: 50px;
+            opacity: 1;
+          }
+
+          .btn{
+            position: absolute;
+            right: 0px;
+          }
+
+          &.active {
+            a{
+              background-color: $primary-color;
+            }
+            .icon {
+              color: $surface-color;
+            }
+
+            .name {
+              color: $surface-color;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+    .user {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      color: $dark-color;
+      padding: 0 5px;
+      position: relative;
+    }
+
+    .content{
+      position: absolute;
+      left: 64px;
+      opacity: 1;
+    }
+
+
+    .btn{
+      position: absolute;
+      right: 8px;
+    }
+  }
+
+  &.close {
+    width: 82px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    .logo2 {
+      height: 35px;
+      width: 190px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: left;
+      }
+    }
+
+    .head {
+      padding: 10px 0px 0px 25px;
+    }
+    .btn-1{
+      position: absolute;
+      left: 59px;
+    }
+
+    .title-1{
+      margin: 20px 2px 5px;
+    }
+
+    li {
+      a {
+        justify-content: center;
+      }
+    }
+
+    .head {
+      justify-content: center;
+
+      .btn{
+        display: flex;
+      }
+    }
+
+    .body {
+      .name {
+        opacity: 0 !important;
+      }
+
+      .icon {
+        margin-right: 0 !important;
+      }
+
+      
+
+      .btn {
+        display: none;
+      }
+
+      .btn-name{
+        opacity: 0 !important;
+      }
+
+    }
+    
+    .footer {
+      cursor: pointer;
+      .user {
+        justify-content: center;
+        .avatar {
+          margin-right: 0 !important;
+        }
+      }
+
+      .content {
+        opacity: 0 !important;
+        display: none !important;
+      }
+
+      .btn {
+        display: none;
+      }
+    }
+  }
+
+  .title{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 10px 15px 5px;
+    color: $mute-color;
+  }
+
+  .title-1{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 25px 15px 5px;
+    color: $mute-color;
+  }
+
+  .title-2{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 10px 20px 0px;
+    color: $mute-color;
+  }
+}
+
+.icon-lg{
+  font-size: 30px !important;
+}
+
+.btn-1{
+  position: absolute;
+  left: 217px;
+  color: $surface-color;
+  transition: width .1s ease-in-out;
+  height: 34px;
+  width: 18px;
+  background-color: $primary-color;
+  border: transparent;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-icon{
+  font-size: 12px;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  background-color: $semi-mute-color;
+  color: $primary-color;
+  text-transform: uppercase;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+li:hover{
+  background-color: $semi-mute-color;
+}
+
+.btn-name{
+  font-size: 14px;
+  color: $primary-color;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  left: 50px;
+  opacity: 1;
+}
+
+.btn-side{
+  color: $primary-color;
+  border-radius: 4px;
+  border: 1px solid $primary-color;
+}
+
+.btn-side:hover{
+  background-color: #004cff !important;
+  font-weight: 500;
+
+  span{
+    color: #fff;
+  }
+}
+
+
+.change-company{
+  font-weight: 500;
+    color: #3571FF;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.wrap-text{
+  display: inline-block;
+  max-width: 125px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.btn-primary{ 
+  border-radius: 4px;
+  min-width: 200px;
+  background-color: $primary-color !important;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.btn-primary:hover{
+  background-color: #004cff !important;
+  font-weight: 500;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bbbbbb;
+}
+
+.active {
+  a{
+    background-color: #DBE7FF;
+    border-radius: 0px !important;
+  }
+  .icon {
+    color: $dark-color;
+  }
+
+  .name {
+    color: $dark-color !important;
+  }
+}
+
+.blk{
+  color: $dark-color;
+}
+
+.d{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 1366px){  
+  .btn-1{
+    position: absolute;
+    left: 217px;
+    color: $surface-color;
+    transition: width .1s ease-in-out;
+    height: 34px;
+    width: 18px;
+    background-color: $primary-color;
+    border: transparent;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.logo3 {
+  height: 35px;
+  width: 190px;
+  display: none;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: left;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .sidenav{
+    width: 82px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    .logo3 {
+      height: 35px;
+      width: 190px;
+      display: inline;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        object-position: left;
+      }
+    }
+
+    .head {
+      padding: 10px 0px 0px 25px;
+    }
+    .btn-1{
+      position: absolute;
+      left: 59px;
+    }
+
+    .title-1{
+      margin: 20px 2px 5px;
+    }
+
+    li {
+      a {
+        justify-content: center;
+      }
+    }
+
+    .head {
+      justify-content: center;
+
+      .btn{
+        display: flex;
+      }
+    }
+
+    .body {
+      .name {
+        opacity: 0 !important;
+      }
+
+      .icon {
+        margin-right: 0 !important;
+      }
+
+      .btn {
+        display: none;
+      }
+
+      .btn-name{
+        opacity: 0 !important;
+      }
+    }
+    
+    .footer {
+      cursor: pointer;
+      .user {
+        justify-content: center;
+        .avatar {
+          margin-right: 0 !important;
+        }
+      }
+
+      .content {
+        opacity: 0 !important;
+        display: none !important;
+      }
+
+      .btn {
+        display: none;
+      }
+    }
+}
+  .logo{
+    display: none;
+  }
+}

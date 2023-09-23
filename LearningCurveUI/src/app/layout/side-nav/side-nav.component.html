@@ -1,0 +1,28 @@
+<aside [ngClass]="toggleClass">
+  <div class="head">
+    <button class="btn-1" (click)="toggleSideNav()">
+      <span class="material-icons-round flip-icon" *ngIf="isToggled">
+        arrow_forward_ios
+      </span>
+      <span class="material-icons-round flip-icon" *ngIf="!isToggled">
+        arrow_back_ios
+      </span>
+    </button>
+  </div>
+
+  <div class="body">
+    <ul class="nav-items">
+      <div class="title-1">Settings</div>
+      <li routerLink="/user-management" routerLinkActive="active">
+        <a>
+          <span class="material-icons-round icon">
+            manage_accounts
+          </span>
+          <span class="name">
+            User Managment
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>

@@ -1,0 +1,51 @@
+<div class="header">
+    <div class="header-item">
+        <div class="search-wrapper">
+            <span class="material-icons-round">search</span>
+            <input class="search-input" type="text" #search placeholder="Search by First Name, Last Name, Username or Email..." />
+            <button class="btn" mat-icon-button><span class="material-icons-round">close</span></button>
+        </div>
+        <button class="btn btn-primary">
+            <div class="btn-text">
+                <span class="material-icons-round me-2">add_circle</span>New User
+            </div>
+        </button>
+    </div> 
+</div>  
+<div class="wrapper-card">
+	<div class="cards_wrap">
+        <div class="mt-2 fs-lg fw-300">No User Found</div>
+		<div class="card_item">
+			<div class="card_inner">
+				<div class="card-sm-h">
+                    <div class="fs-lg fw-500 wrap-text username"></div>
+                    <button class="btn" mat-icon-button [matMenuTriggerFor]="edit" aria-label="Example icon-button with a menu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <mat-menu #edit="matMenu">
+                        <button mat-menu-item class="d-flex align-items-center">
+                        <span class="material-icons-round me-2 mute">
+                            edit
+                        </span>
+                        <span>Edit</span>
+                        </button>
+                        <button mat-menu-item class="d-flex align-items-center">
+                            <span class="material-icons-round me-2 danger-color">
+                                delete
+                            </span>
+                            <span>Delete</span>
+                        </button>
+                    </mat-menu>
+                </div>
+                <div class="card-sm-b">
+                    <div class="fs-sm fw-300 orange-color"></div>
+                    <div class="fs-sm fw-400 mt-2 username"></div>
+                    <div class="fs-sm fw-500 role mt-2"></div>
+                </div>
+			</div>
+		</div>
+    </div>
+</div>
+<div class="footer">
+    <mat-paginator class="mt-3"></mat-paginator>
+</div>

@@ -1,0 +1,23 @@
+<div class="header">
+    <div class="header-item">
+        <div class="h-it">
+            <span class="material-icons-round h-icon me-3">
+                manage_accounts
+            </span>
+            <div class="pg-title">User Management</div>
+        </div>
+    </div> 
+</div>
+<mat-tab-group>
+    <mat-tab label="User Roles">
+        <ng-template matTabContent>
+            <learning-curve-user-role></learning-curve-user-role>
+        </ng-template>
+    </mat-tab>
+    <mat-tab label="Users">
+        <ng-template matTabContent>
+            <learning-curve-user></learning-curve-user>
+        </ng-template>
+    </mat-tab>
+</mat-tab-group>
+  

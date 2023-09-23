@@ -1,0 +1,103 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button class="btn" mat-icon-button><span
+                        class="material-icons-round">close</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form w-100">
+                        <input class="form__input" placeholder=" " formControlName="firstName">
+                        <label class="form__label">First Name<span class="danger-color">*</span></label>
+                    </div>
+
+                    <div class="form w-100 mt-3">
+                        <input class="form__input" placeholder=" " formControlName="lastName">
+                        <label class="form__label">Last Name<span class="danger-color">*</span></label>
+                    </div>
+
+                    <div class="form w-100 mt-3">
+                        <input class="form__input" placeholder=" " formControlName="email">
+                        <label class="form__label">Email<span class="danger-color">*</span></label>
+                    </div>
+
+                    <div class="form w-100 mt-3">
+                        <input class="form__input" placeholder=" " formControlName="userName">
+                        <label class="form__label">Username<span class="danger-color">*</span></label>
+                    </div>
+
+                    <div class="inp w-2 mt-3">
+                        <input type="text"
+                            matInput class="form-select w-100"
+                            formControlName="timeZone"
+                            placeholder="TimeZone"
+                            required
+                            [matAutocomplete]="autoTimezone">
+                        <mat-autocomplete #autoTimezone="matAutocomplete">
+                            <mat-option>
+                            </mat-option>
+                        </mat-autocomplete>
+                    </div>
+
+                    <div class="inp w-2 mt-3">
+                        <input type="text"
+                            matInput class="form-select w-100"
+                            formControlName="role"
+                            required placeholder="Select user role"
+                            [matAutocomplete]="autoRoleName">
+                        <mat-autocomplete #autoRoleName="matAutocomplete">
+                            <mat-option>
+                            </mat-option>
+                        </mat-autocomplete>
+                    </div>   
+                   
+                    <div class="form w-100 mt-2">
+                        <a class="fw-500 fs-sm color-primary link">Customize user role permission</a>
+                    </div>
+                    <div class="form w-100 mt-3">
+                        <div class="pass-form w-100">
+                        <input autocomplete="new-password" class="pass-form__input" placeholder="" formControlName="password">
+                        <label class="pass-form__label">Password<span class="danger-color">*</span></label>
+                    </div>
+                    </div>
+                    <div class="form w-100 mt-3">
+                        <div class="pass-form w-100">
+                        <input class="pass-form__input" placeholder=" " formControlName="confirmPassword">
+                        <label class="pass-form__label">Confirm Password<span class="danger-color">*</span></label>
+                    </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">
+                    Save
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Update
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary">Reset</button>
+                <button type="button" class="btn btn-primary">
+                    Ok
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

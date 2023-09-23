@@ -1,0 +1,49 @@
+<div class="header">
+    <div class="header-item">
+        <div class="search-wrapper">
+            <span class="material-icons-round">search</span>
+            <input class="search-input" type="text" placeholder="Search by User Role..." />
+            <button class="btn" mat-icon-button><span class="material-icons-round">close</span></button>
+        </div>
+        <button class="btn btn-primary" (click)="openUserRole()">
+            <div class="btn-text">
+                <span class="material-icons-round me-2">add_circle</span>New User Role
+            </div>
+        </button>
+    </div>
+</div>
+<div class="wrapper-card mt-3">
+    <div class="cards_wrap">
+        <div class="mt-2 fs-lg fw-300">No User Role Found</div>
+        <div class="card_item">
+            <div class="card_inner">
+                <div class="card-sm-h">
+                    <div class="fs-md fw-700 wrap-text mb-1"></div>
+                    <a class="fw-500 fs-sm link">View Permissions</a>
+                </div>
+                <div class="card-sm-b">
+                    <button class="btn me-2 delete"  mat-icon-button><span class="material-icons danger-color">delete</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"></h5>
+                <button class="btn" mat-icon-button><span
+                        class="material-icons-round">close</span></button>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

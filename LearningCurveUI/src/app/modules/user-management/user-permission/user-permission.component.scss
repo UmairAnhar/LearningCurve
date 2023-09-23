@@ -1,0 +1,31 @@
+@import "../../../../assets/styles/colors";
+@import "../../../../assets/styles/elements";
+@import "../../../../assets/styles/typo";
+
+
+.cards_wrap{
+    padding: 20px;
+    border: 1px solid $semi-mute-color;
+    border-radius: 4px;
+    background-color: #F3F4F9;
+    margin-bottom: 20px;
+}
+
+.card-sm-b{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.mr{
+    margin-right: 20px;
+}
+
+.permission{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 4px;
+}

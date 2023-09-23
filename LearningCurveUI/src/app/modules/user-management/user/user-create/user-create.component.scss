@@ -1,0 +1,48 @@
+@import "../../../../../assets/styles/colors";
+@import "../../../../../assets/styles/elements";
+@import "../../../../../assets/styles/typo";
+
+.form {
+	display: inline-block !important;
+
+	.form__input {
+		display: block !important;
+	}
+}
+
+.inp{
+    width:300px
+}
+
+.time-picker-value{
+	border:none
+  }
+  
+  .one-line{
+	display: flex;
+  }
+
+.w-2{
+	width: 414px;
+}
+
+.form-select{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px !important;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $dark-color !important;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #9a9a9a !important;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    appearance: none;
+}

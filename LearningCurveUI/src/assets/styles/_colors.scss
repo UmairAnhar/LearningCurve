@@ -1,0 +1,122 @@
+$primary-color:#3571FF;
+$success-color:#22B07D;
+$body-color:#F3F4F9;
+$surface-color:#FFFFFF;
+$semi-mute-color:#eaeaea;
+$mute-color:#9A9A9A;
+$dark-color:#121212;
+$danger-color:#F44336;
+$grey-color:#F2F2F2;
+$orange-color:#F99600;
+$hold-color:#EE955B;
+.color-primary{
+    color: $primary-color;
+}
+
+.body-color{
+    color: $body-color; 
+}
+
+.surface-color{
+    color: $surface-color; 
+}
+
+.semi-mute{
+    color: $semi-mute-color; 
+}
+
+.mute{
+    color: $mute-color; 
+}
+
+.dark-color{
+    color: $dark-color; 
+}
+
+.orange-color{
+    color: $orange-color;
+}
+
+.success-color{
+    color: $success-color;
+}
+
+.danger-color{
+    color: $danger-color;
+}
+
+.primary-bg{
+    background-color: $primary-color;
+}
+
+.success-bg{
+    background-color: $success-color;
+}
+
+.onhold-c{
+    color: #EE955B;
+}
+
+
+
+.warning-bg{
+    background-color: #FFD84F;
+}
+
+.danger-bg{
+    background-color: #FF8B8B;
+}
+
+$yellow:#FFBA2F;
+$green:#22B07D;
+$red: #F44336;
+$blue:#3571FF;
+$purple:#DBE7FF;
+
+
+$yellow-light: #FFD84F;
+$green-light:#BCE7D8;
+$red-light: #FFB7B2;
+$blue-light:#DBE7FF;
+$purple-light:#DBE7FF;
+
+
+.yellow-text{
+    color: $yellow;
+}
+
+.green-text{
+    color: $green;
+}
+
+.red-text{
+    color: $red;
+}
+
+.blue-text{
+    color: $blue;
+}
+
+.purple-text{
+    color: $purple;
+}
+
+.yellow-background{
+    background-color: #FFD84F;
+}
+
+.green-background{
+    background-color: #BCE7D8;
+}
+
+.red-background{
+    background-color: #FFB7B2;
+}
+
+.blue-background{
+    background-color: #DBE7FF;
+}
+
+
+
+

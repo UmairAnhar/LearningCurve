@@ -1,1 +1,253 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/ngx-toastr/toastr';
+
+@include mat.core();
+
+
+$candy-app-primary: mat.define-palette(mat.$indigo-palette);
+$candy-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$candy-app-warn: mat.define-palette(mat.$red-palette);
+
+$candy-app-theme: mat.define-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+@include mat.all-component-themes($candy-app-theme);
+
+.dark-theme {
+  $primary-dark: mat.define-palette(mat.$pink-palette, 700);
+  $accent-dark: mat.define-palette(mat.$green-palette);
+  $warn-dark: mat.define-palette(mat.$red-palette);
+
+  $theme-dark: mat.define-dark-theme($primary-dark, $accent-dark, $warn-dark);
+
+  @include mat.all-component-themes($theme-dark);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #F3F4F9;
+}
+
+.modal {
+  background: rgba(0, 0, 0, .5);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 30px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bbbbbb;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #004cff !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+  background-color: #004cff;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: #B0CBFF;
+}
+
+// .toast-bottom-right {
+//   right: 35% !important;
+//   bottom: 12px;
+// }
+
+//input//
+
+.mat-form-field {
+  font-weight: 400 !important;
+  color: #9A9A9A !important;
+  line-height: 1 !important;
+  font-size: 14px !important;
+}
+
+.ng-select {
+  padding-bottom: 0px !important;
+}
+
+.ng-select .ng-select-container.ng-appearance-outline {
+  padding: 0 1.3em !important;
+  min-height: 40px !important;
+}
+
+.ng-select .ng-select-container {
+  align-items: center;
+  min-height: 40px !important;
+}
+
+.ng-placeholder {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #9A9A9A !important;
+}
+
+.ng-select.ng-select-multiple .ng-select-container.ng-appearance-outline .ng-arrow-wrapper {
+  top: 2px !important;
+}
+
+.ng-select .ng-select-container .ng-value-container {
+  padding: 5px 0px 10px !important;
+}
+
+.ng-select .ng-select-container.ng-appearance-outline:after {
+  border: solid 1px #9A9A9A !important;
+  border-radius: 4px !important;
+}
+
+.ng-select .ng-select-container.ng-appearance-outline:hover:after {
+  border-color: #121212 !important;
+}
+
+.ng-select .ng-select-container.ng-appearance-outline:focus {
+  border-color: #3571FF !important;
+}
+
+.disappear {
+  display: none;
+}
+
+.mat-paginator-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 40px !important;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+}
+
+// sub cate- compnay view
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  margin: 0 0 !important;
+}
+
+// .mat-form-field-wrapper {
+//   padding-bottom:0 !important;
+// }
+
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0.5em 0 0.7em 0 !important;
+  min-height: 44px !important;
+}
+
+.mat-form-field-label-wrapper {
+  position: absolute;
+  left: 0px;
+  top: -16px !important;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  height: 0px !important;
+}
+
+// calender
+.mat-calendar {
+  color: #3571FF;
+}
+
+.mat-calendar-table-header th {
+  color: #3571FF;
+  font-weight: 700
+}
+
+.attachment-modal {
+  z-index: 111 !important;
+}
+
+.cdk-overlay-container {
+  position: fixed;
+  z-index: 3000 !important;
+}
+
+.no-records {
+  padding: 50px;
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 160px;
+  }
+
+  .head-1 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: #60718B;
+  }
+
+  .head-2 {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+    color: #60718B;
+  }
+}
+
+.h-auto{
+  height: auto !important;
+}
+
+.ng-select .ng-select-container .ng-value-container .ng-placeholder {
+  top:17px;
+}
+
+.ng-select.ng-select-single .ng-select-container.ng-appearance-outline .ng-arrow-wrapper {
+  bottom: 11px !important;
+}
+
+.ng-select .ng-select-container.ng-appearance-outline {
+  padding: 0 1.3em !important;
+  min-height: 50px !important;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #3571FF;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle, .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple), .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-persistent-ripple, .mat-radio-button.mat-accent:active .mat-radio-persistent-ripple {
+  background-color: #3571FF;
+}
+
+.text-a-l{
+  text-align: left !important;
+}
+
+.ng-dropdown-panel.ng-select-bottom {
+  top: 54px !important;
+  box-shadow: 0 5px 5px -3px rgb(0 0 0 / 20%), 0 8px 10px 1px rgb(0 0 0 / 14%), 0 3px 14px 2px rgb(0 0 0 / 12%);
+}
+
+@media screen and (min-width:1440px) {
+
+  .mat-date-range-input-mirror {
+    width: 170px !important;
+  }
+}
+
+.w-500 {
+  width: 500px;
+}
